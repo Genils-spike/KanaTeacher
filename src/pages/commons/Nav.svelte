@@ -10,6 +10,6 @@
         <Link to="hiragana">Hiragana</Link>
     </nav>
     <div>
-        <Route path="hiragana" component="{Hiragana}"/>
+        <Route path="hiragana"><Hiragana/></Route>
     </div>
 </Router>
