@@ -2,10 +2,12 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://genils-spike.github.io/KanaTeacher",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear --single"
+    "start": "sirv public --no-clear --single",
+    "deploy": "rollup -c && node ./gh-pages.js"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",

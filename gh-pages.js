@@ -4,10 +4,10 @@ ghpages.publish(
     'public', // path to public directory
     {
         branch: 'master',
-        repo: 'https://gitlab.com/genilsu/hiragana-trainer.git', // Update to point to your repository  
+        repo: 'git@github.com:Genils-spike/KanaTeacher.git', // Update to point to your repository  
         user: {
-            name: 'genilsu', // update to use your name
-            email: 'Your Email address' // Update to use your email
+            name: 'genils-spike', // update to use your name
+            email: 'alexandrebeauverger@gmail.com' // Update to use your email
         }
     },
     () => {
