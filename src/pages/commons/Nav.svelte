@@ -9,7 +9,7 @@
     ]
 </script>
 
-<Router url={url}>
+<Router basepath="/KanaTeacher" url={url}>
     <nav>
         <div class="logo-container">
             <Link to="/"><p class="logo-link">KanaTeacher</p></Link>
