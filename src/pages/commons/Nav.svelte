@@ -12,12 +12,12 @@
 <Router basepath="/KanaTeacher" url={url}>
     <nav>
         <div class="logo-container">
-            <Link to="/"><p class="logo-link">KanaTeacher</p></Link>
+            <Link to="/KanaTeacher"><p class="logo-link">KanaTeacher</p></Link>
         </div>
         <div class="menu-container">
             <ul>
                 {#each routes as route}
-                    <li><Link to="{route.url}"><h3>{route.page}</h3></Link></li>
+                    <li><Link to="/KanaTeacher{route.url}"><h3>{route.page}</h3></Link></li>
                 {/each}
             </ul>
         </div>
