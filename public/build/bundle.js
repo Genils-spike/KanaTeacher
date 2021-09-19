@@ -2424,33 +2424,6 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (15:12) <Link class="logo-link" to="/">
-    function create_default_slot_2(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("KanaTeacher");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_2.name,
-    		type: "slot",
-    		source: "(15:12) <Link class=\\\"logo-link\\\" to=\\\"/\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
     // (20:24) <Link to={route.url}>
     function create_default_slot_1(ctx) {
     	let h3;
@@ -2461,8 +2434,8 @@ var app = (function () {
     		c: function create() {
     			h3 = element("h3");
     			t = text(t_value);
-    			attr_dev(h3, "class", "svelte-1bxto9z");
-    			add_location(h3, file$1, 19, 45, 592);
+    			attr_dev(h3, "class", "svelte-vrul5q");
+    			add_location(h3, file$1, 19, 45, 599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -2504,8 +2477,8 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			create_component(link.$$.fragment);
-    			attr_dev(li, "class", "svelte-1bxto9z");
-    			add_location(li, file$1, 19, 20, 567);
+    			attr_dev(li, "class", "svelte-vrul5q");
+    			add_location(li, file$1, 19, 20, 574);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -2551,25 +2524,14 @@ var app = (function () {
     function create_default_slot(ctx) {
     	let nav;
     	let div0;
-    	let link;
-    	let t0;
+    	let a;
+    	let t1;
     	let div1;
     	let ul;
-    	let t1;
+    	let t2;
     	let div2;
     	let route;
     	let current;
-
-    	link = new Link({
-    			props: {
-    				class: "logo-link",
-    				to: "/",
-    				$$slots: { default: [create_default_slot_2] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
     	let each_value = /*routes*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -2591,8 +2553,9 @@ var app = (function () {
     		c: function create() {
     			nav = element("nav");
     			div0 = element("div");
-    			create_component(link.$$.fragment);
-    			t0 = space();
+    			a = element("a");
+    			a.textContent = "KanaTeacher";
+    			t1 = space();
     			div1 = element("div");
     			ul = element("ul");
 
@@ -2600,24 +2563,27 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t1 = space();
+    			t2 = space();
     			div2 = element("div");
     			create_component(route.$$.fragment);
-    			attr_dev(div0, "class", "logo-container");
+    			attr_dev(a, "class", "logo-link svelte-vrul5q");
+    			attr_dev(a, "href", "/KanaTeacher");
+    			add_location(a, file$1, 14, 12, 388);
+    			attr_dev(div0, "class", "logo-container svelte-vrul5q");
     			add_location(div0, file$1, 13, 8, 347);
-    			attr_dev(ul, "class", "svelte-1bxto9z");
-    			add_location(ul, file$1, 17, 12, 502);
-    			attr_dev(div1, "class", "menu-container svelte-1bxto9z");
-    			add_location(div1, file$1, 16, 8, 461);
-    			attr_dev(nav, "class", "svelte-1bxto9z");
+    			attr_dev(ul, "class", "svelte-vrul5q");
+    			add_location(ul, file$1, 17, 12, 509);
+    			attr_dev(div1, "class", "menu-container svelte-vrul5q");
+    			add_location(div1, file$1, 16, 8, 468);
+    			attr_dev(nav, "class", "svelte-vrul5q");
     			add_location(nav, file$1, 12, 4, 333);
-    			add_location(div2, file$1, 24, 4, 698);
+    			add_location(div2, file$1, 24, 4, 705);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, nav, anchor);
     			append_dev(nav, div0);
-    			mount_component(link, div0, null);
-    			append_dev(nav, t0);
+    			append_dev(div0, a);
+    			append_dev(nav, t1);
     			append_dev(nav, div1);
     			append_dev(div1, ul);
 
@@ -2625,20 +2591,12 @@ var app = (function () {
     				each_blocks[i].m(ul, null);
     			}
 
-    			insert_dev(target, t1, anchor);
+    			insert_dev(target, t2, anchor);
     			insert_dev(target, div2, anchor);
     			mount_component(route, div2, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const link_changes = {};
-
-    			if (dirty & /*$$scope*/ 32) {
-    				link_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link.$set(link_changes);
-
     			if (dirty & /*routes*/ 2) {
     				each_value = /*routes*/ ctx[1];
     				validate_each_argument(each_value);
@@ -2669,7 +2627,6 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(link.$$.fragment, local);
 
     			for (let i = 0; i < each_value.length; i += 1) {
     				transition_in(each_blocks[i]);
@@ -2679,7 +2636,6 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(link.$$.fragment, local);
     			each_blocks = each_blocks.filter(Boolean);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2691,9 +2647,8 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(nav);
-    			destroy_component(link);
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(div2);
     			destroy_component(route);
     		}

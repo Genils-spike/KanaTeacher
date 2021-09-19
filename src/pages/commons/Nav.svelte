@@ -12,7 +12,7 @@
 <Router url={url}>
     <nav>
         <div class="logo-container">
-            <Link class="logo-link" to="/">KanaTeacher</Link>
+            <a class="logo-link" href="/KanaTeacher">KanaTeacher</a>
         </div>
         <div class="menu-container">
             <ul>
@@ -48,6 +48,7 @@ nav {
         font-weight: 700;
         color: black;
         letter-spacing: 1px;
+        text-decoration: none;
     }
 }
 
@@ -84,6 +85,9 @@ nav {
         }
     }
     a {
+        h3 {
+            text-decoration: none;
+        }
         &:hover h3{
             color: #E499FF;
         }
