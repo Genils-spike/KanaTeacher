@@ -3,27 +3,27 @@
     import Hiragana from "../hiragana/Hiragana.svelte";
     export let url = "";
     const routes = [
-        {url: '/hiragana', page: 'Hiragana'},
-        {url: '/katakana', page:'Katakana'},
-        {url: '/kanji', page:'Kanji'},
+        {url: 'hiragana', page: 'Hiragana'},
+        {url: 'katakana', page:'Katakana'},
+        {url: 'kanji', page:'Kanji'},
     ]
 </script>
 
 <Router url={url}>
     <nav>
         <div class="logo-container">
-            <a class="logo-link" href="/">KanaTeacher</a>
+            <Link class="logo-link" to="/">KanaTeacher</Link>
         </div>
         <div class="menu-container">
             <ul>
                 {#each routes as route}
-                    <li><a href={route.url}><h3>{route.page}</h3></a></li>
+                    <li><Link to={route.url}><h3>{route.page}</h3></Link></li>
                 {/each}
             </ul>
         </div>
     </nav>
     <div>
-        <Route path="hiragana"><Hiragana/></Route>
+        <Route path="hiragana" component={Hiragana}></Route>
     </div>
 </Router>
 
