@@ -45,7 +45,7 @@
         </button> -->
     </div>
     <div class=button-line>
-        <div on:click={helpUser}>
+        <div class="help-button" on:click={helpUser}>
             Help me
         </div>
         <div class="verify-button" on:click={validate}>
@@ -58,7 +58,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 .kana-container {
     width: 500px;
-    margin: 0 auto 0 auto;
+    margin: 150px auto 0 auto;
     border: 2px solid #e5e5e5;
     border-radius: 16px;
 }
@@ -135,15 +135,31 @@
 
     div{
         width: 49.5%;
-        height: 30px;
+        height: 35px;
         margin: 0;
         display: inline-block;
         vertical-align: center;
-        border-radius: 0 0 16px 0;
+        line-height: 35px;
+        transition: 0.4s;
 
         &:hover {
             cursor: pointer;
-            background-color: red;
+        transition: 0.4s;
+        }
+    }
+    
+    .verify-button{
+        border-radius: 0 0 16px 0;
+        &:hover{
+            background-color: green;
+            color: white; 
+        }
+    }
+    .help-button{
+            border-radius: 0 0 0 16px;
+            &:hover{
+                background-color: red;
+                color: white; 
         }
     }
 }
